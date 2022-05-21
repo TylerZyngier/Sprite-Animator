@@ -38,10 +38,10 @@ namespace SpriteAnimator
 
         private void HandleAnimations()
         {
-            if (animationController != null && currentAnimation == null)
-            {
-                Play(animationController.animationClips[0]);
-            }
+            // if (animationController != null && currentAnimation == null)
+            // {
+            //     Play(animationController.animationClips[0]);
+            // }
 
             if (currentAnimation == null) return;
 

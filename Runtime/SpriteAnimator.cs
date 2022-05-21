@@ -6,7 +6,7 @@ namespace SpriteAnimator
     public class SpriteAnimator : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer;
-        public AnimationController animationController;
+        //public AnimationController animationController;
 
         private AnimationClip currentAnimation;
         private float frameTimer;
@@ -65,6 +65,11 @@ namespace SpriteAnimator
             frameTimer = 0;
         }
 
+        /// <Description> 
+        /// Old play mathod
+        /// Makes use of animator controller
+        /// May reimpliment animator controller
+        /// </Description>
         // public void Play(string animationName, int entryFrame = 0)
         // {
         //     if (currentAnimation.name == animationName) return;

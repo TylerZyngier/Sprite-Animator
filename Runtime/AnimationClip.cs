@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SpriteAnimator
 {
-    [CreateAssetMenu(fileName = "NewAnimationClip", menuName = "2D Animator/Animation Clip", order = 1)]
+    [CreateAssetMenu(fileName = "NewAnimationClip", menuName = "Sprite Animator/Animation Clip", order = 1)]
     public class AnimationClip : ScriptableObject
     {
         [SerializeField] private int framerate;

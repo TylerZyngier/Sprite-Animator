@@ -1,3 +1,16 @@
 {
-	"name": "Unity.tylerzyngier.sprite-animator.Editor"
+    "name": "Unity.tylerzyngier.sprite-animator.Editor",
+    "rootNamespace": "SpriteAnimator",
+    "references": [
+        "GUID:9de6d2ffea4aa8344936b3763d1162ed"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

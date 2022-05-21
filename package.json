@@ -1,0 +1,19 @@
+{
+  "name": "com.tylerzyngier.sprite-animator",
+  "version": "0.0.1",
+  "displayName": "Sprite Animator",
+  "description": "An alternative to Unity's built in animator thats built for 2D/Sprite animation",
+  "unity": "2021.3",
+  "dependencies": {},
+  "keywords": [
+    "animation",
+    "utility",
+    "2d",
+    "sprite"
+  ],
+  "author": {
+    "name": "Tyler Zyngier",
+    "email": "tyler.zyngier@gmail.com",
+    "url": "https://twitter.com/tyler_zyngier"
+  }
+}

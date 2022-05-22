@@ -28,9 +28,9 @@ namespace SpriteAnimator
             {
                 if (value == frameCount) return;
 
-                if (value < 1)
+                if (value < 0)
                 {
-                    value = 1;
+                    value = 0;
                 }
 
                 int size = frames.Count;
@@ -45,8 +45,6 @@ namespace SpriteAnimator
                 }
             }
         }
-
-
 
         [SerializeField] private int startingFrame = 1;
         public int GetStartingFrame() => startingFrame;

@@ -101,7 +101,7 @@ namespace SpriteAnimator
 
                     if (GUILayout.Button("Delete empty frames", GUILayout.Width(150f)))
                     {
-                        for (int i = selectedAnimation.frames.Count - 1; i > 0; i--)
+                        for (int i = selectedAnimation.frames.Count - 1; i >= 0; i--)
                         {
                             Sprite item = selectedAnimation.frames[i];
 
@@ -155,6 +155,38 @@ namespace SpriteAnimator
 
                 EditorGUILayout.EndHorizontal();
                 EditorGUILayout.EndVertical();
+
+                if (selectedAnimation == null) return;
+
+                Event evt = Event.current;
+
+                switch (evt.type)
+                {
+                    case EventType.DragUpdated:
+                    case EventType.DragPerform:
+                        if (!section.Contains(evt.mousePosition))
+                            return;
+
+                        DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
+
+                        if (evt.type == EventType.DragPerform)
+                        {
+                            DragAndDrop.AcceptDrag();
+
+                            foreach (Object dragged_object in DragAndDrop.objectReferences)
+                            {
+                                string texturePath = AssetDatabase.GetAssetPath(dragged_object);
+                                Object[] assets = AssetDatabase.LoadAllAssetsAtPath(texturePath);
+
+                                foreach (Object asset in assets)
+                                {
+                                    if (asset.GetType() != typeof(Sprite)) continue;
+                                    selectedAnimation.frames.Add(asset as Sprite);
+                                }
+                            }
+                        }
+                        break;
+                }
             }
         }
 

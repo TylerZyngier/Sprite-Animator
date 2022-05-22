@@ -48,11 +48,12 @@ namespace SpriteAnimator
             EditorUtility.SetDirty(selectedAnimation);
         }
 
+        private void DrawAnimationLabel() => GUILayout.Label("Animation: " + (selectedAnimation == null ? "None" : selectedAnimation.name), CustomStyles.header01);
+
         private void DrawSettings()
         {
             EditorGUILayout.BeginVertical(CustomStyles.section02(width: 200));
 
-            GUILayout.Label("Animation: " + (selectedAnimation == null ? "None" : selectedAnimation.name), CustomStyles.header01);
             GUILayout.Label("Settings", CustomStyles.header02);
 
             EditorGUILayout.BeginVertical(EditorStyles.helpBox, GUILayout.ExpandHeight(true));
@@ -76,6 +77,7 @@ namespace SpriteAnimator
         {
             EditorGUILayout.BeginVertical(CustomStyles.section02());
 
+            DrawAnimationLabel();
             DrawFrameHeader();
             DrawFrameBoard();
 

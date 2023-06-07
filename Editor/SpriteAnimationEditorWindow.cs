@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace SpriteAnimator
+namespace SpriteAnimation
 {
     public class SpriteAnimationEditorWindow : EditorWindow
     {

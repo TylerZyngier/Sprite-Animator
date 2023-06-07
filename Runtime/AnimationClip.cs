@@ -2,10 +2,10 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SpriteAnimator
+namespace SpriteAnimation
 {
     [CreateAssetMenu(fileName = "NewAnimationClip", menuName = "Sprite Animator/Animation Clip", order = 1)]
-    public class AnimationClip : ScriptableObject
+    public class SpriteAnimationClip : ScriptableObject
     {
         [SerializeField] private int framerate;
         public int GetFramerate() => framerate;

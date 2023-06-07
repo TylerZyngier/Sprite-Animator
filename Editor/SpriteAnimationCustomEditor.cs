@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
 
-namespace SpriteAnimator
+namespace SpriteAnimation
 {
     public class AssetHandler
     {

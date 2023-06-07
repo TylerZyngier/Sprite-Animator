@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SpriteAnimator
+namespace SpriteAnimation
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class SpriteAnimator : MonoBehaviour
@@ -8,7 +8,7 @@ namespace SpriteAnimator
         public SpriteRenderer spriteRenderer;
         //public AnimationController animationController;
 
-        private AnimationClip currentAnimation;
+        private SpriteAnimationClip currentAnimation;
         private float frameTimer;
 
         private int currentFrameIndex;
@@ -56,7 +56,7 @@ namespace SpriteAnimator
             spriteRenderer.sprite = currentAnimation.frames[frameIndex];
         }
 
-        public void Play(AnimationClip nextAnimation)
+        public void Play(SpriteAnimationClip nextAnimation)
         {
             if (currentAnimation == nextAnimation) return;
 
@@ -74,9 +74,9 @@ namespace SpriteAnimator
         // {
         //     if (currentAnimation.name == animationName) return;
 
-        //     AnimationClip newAnimation = null;
+        //     SpriteAnimationClip newAnimation = null;
 
-        //     foreach (AnimationClip clip in animationController.animationClips)
+        //     foreach (SpriteAnimationClip clip in animationController.animationClips)
         //     {
         //         if (clip.name != animationName) continue;
 

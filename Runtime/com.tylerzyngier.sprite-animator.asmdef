@@ -1,6 +1,6 @@
 {
     "name": "com.tylerzyngier.sprite-animator",
-    "rootNamespace": "SpriteAnimator",
+    "rootNamespace": "SpriteAnimation",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -5,7 +5,7 @@ namespace SpriteAnimation
 {
     public class SpriteAnimationEditorWindow : EditorWindow
     {
-        private static AnimationClip selectedAnimation;
+        private static SpriteAnimationClip selectedAnimation;
         private static Vector2 scrollPos;
 
         [MenuItem("Window/Animation/Sprite Animation")]
@@ -15,7 +15,7 @@ namespace SpriteAnimation
             window.minSize = new Vector2(500, 300);
         }
 
-        public static void Open(AnimationClip animationObj)
+        public static void Open(SpriteAnimationClip animationObj)
         {
             Open();
             selectedAnimation = animationObj;
@@ -23,18 +23,18 @@ namespace SpriteAnimation
 
         private void OnSelectionChange()
         {
-            if (Selection.activeObject is AnimationClip)
+            if (Selection.activeObject is SpriteAnimationClip)
             {
-                selectedAnimation = Selection.activeObject as AnimationClip;
+                selectedAnimation = Selection.activeObject as SpriteAnimationClip;
                 Repaint();
             }
         }
 
         private void OnGUI()
         {
-            if (selectedAnimation == null && Selection.activeObject is AnimationClip)
+            if (selectedAnimation == null && Selection.activeObject is SpriteAnimationClip)
             {
-                selectedAnimation = Selection.activeObject as AnimationClip;
+                selectedAnimation = Selection.activeObject as SpriteAnimationClip;
             }
 
             EditorGUILayout.BeginHorizontal(CustomStyles.section01);

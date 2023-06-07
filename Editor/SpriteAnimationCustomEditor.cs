@@ -9,7 +9,7 @@ namespace SpriteAnimation
         [OnOpenAsset()]
         public static bool OpenEditor(int instanceId, int line)
         {
-            AnimationClip clip = EditorUtility.InstanceIDToObject(instanceId) as AnimationClip;
+            SpriteAnimationClip clip = EditorUtility.InstanceIDToObject(instanceId) as SpriteAnimationClip;
 
             if (clip != null)
             {
@@ -21,7 +21,7 @@ namespace SpriteAnimation
         }
     }
 
-    [CustomEditor(typeof(AnimationClip))]
+    [CustomEditor(typeof(SpriteAnimationClip))]
     public class SpriteAnimationCustomEditor : Editor
     {
         private bool foldoutExpanded;
@@ -29,7 +29,7 @@ namespace SpriteAnimation
         {
             if (GUILayout.Button("Open Animation Editor"))
             {
-                SpriteAnimationEditorWindow.Open((AnimationClip)target);
+                SpriteAnimationEditorWindow.Open((SpriteAnimationClip)target);
             }
         }
     }

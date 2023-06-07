@@ -2,7 +2,7 @@
   "name": "com.tylerzyngier.sprite-animator",
   "version": "0.0.5",
   "displayName": "Sprite Animator",
-  "description": "An alternative to Unity's built in animator thats built for 2D/Sprite animation",
+  "description": "An alternative to Unity's built in animator. Geared towards 2D/Sprite animation.",
   "unity": "2021.3",
   "dependencies": {},
   "keywords": [

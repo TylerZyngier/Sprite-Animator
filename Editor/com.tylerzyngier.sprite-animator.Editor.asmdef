@@ -1,6 +1,6 @@
 {
     "name": "Unity.tylerzyngier.sprite-animator.Editor",
-    "rootNamespace": "SpriteAnimator",
+    "rootNamespace": "SpriteAnimation",
     "references": [
         "GUID:9de6d2ffea4aa8344936b3763d1162ed"
     ],

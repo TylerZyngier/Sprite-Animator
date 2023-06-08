@@ -39,7 +39,6 @@ namespace SpriteAnimation
 
             EditorGUILayout.BeginHorizontal(CustomStyles.section01);
             DrawSettings();
-            //VerticalLine();
             DrawFrames();
             EditorGUILayout.EndHorizontal();
 

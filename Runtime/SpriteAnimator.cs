@@ -8,7 +8,7 @@ namespace SpriteAnimation
         public SpriteRenderer spriteRenderer;
         //public AnimationController animationController;
 
-        private SpriteAnimationClip currentAnimation;
+        public SpriteAnimationClip currentAnimation { get; private set; }
         private float frameTimer;
 
         private int currentFrameIndex;
